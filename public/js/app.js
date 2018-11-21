@@ -8,7 +8,7 @@ const poppingModal = function () {
 const render = function (kudoList) {
 
     for (let i = 0; i < kudoList.kudos.length; i++) {
-        
+
         $.get(`/api/users/${kudoList.kudos[i].from_user}`)
             .then(function (fromUser) {
                 const card = $("<div>").addClass("card kudos bg-light mb-3 shadow");
@@ -19,8 +19,10 @@ const render = function (kudoList) {
                 <p class="card-text">${kudoList.kudos[i].body}</p>
                  </div>`;
 
-                $(".jumbotron").append(card).append(cardHeader).append(cardBody);
-                
+                card.append(cardHeader).append(cardBody);
+
+                $(".jumbotron").append(card);
+
             })
             .catch(function (error) {
                 console.log(error);
