@@ -14,6 +14,7 @@ mongoose.connect('mongodb://localhost/kudo_db', { useNewUrlParser: true });
 
 
 require('./routes/apiRoutes')(app);
+require('./routes/html-route')(app);
 
 
 app.listen(PORT, function() {
