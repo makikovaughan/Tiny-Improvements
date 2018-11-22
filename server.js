@@ -12,7 +12,7 @@ app.use(express.static("public"));
 
 //For Heroku
 if (process.env.MONGODB_URI) {
-  mongoose.connect(process.env.MONGODB_URI);
+  mongoose.connect('mongodb://dbAdmin:wFCW5T4ww3th5sd@ds113134.mlab.com:13134/heroku_wwff38kr');
 }
 else {
   //Local URL
