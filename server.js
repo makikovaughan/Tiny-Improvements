@@ -14,7 +14,7 @@ console.log(process.env.PORT);
 
 //For Heroku
 if (process.env.MONGODB_URI) {
-  mongoose.connect(process.env.MONGODB_URI);
+  mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
 }
 else {
   //Local URL
