@@ -40,6 +40,19 @@ module.exports = function (app) {
 
     });
 
+    //Get all Kudos information
+    app.get("/api/kudos", function (req, res) {
+
+        Kudo.find({})
+            .then(function (dbKudo) {
+                res.json(dbKudo);
+            })
+            .catch(function (error) {
+                res.json({ Error: error });
+            })
+
+    });
+
     //Create a kudo document and then update the user document.
     app.post("/api/kudos", function (req, res) {
         const userId = req.body.to_user;

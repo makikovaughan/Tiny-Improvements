@@ -51,7 +51,7 @@
                 <div class="card text-center border-0">
                     <div class="card-body">
                         <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-success" id="modalButton" data-toggle="modal" data-target="#kudoModal">
+                        <button type="button" class="btn btn-info" id="modalButton" data-toggle="modal" data-target="#kudoModal">
                             Give Kudos
                         </button>
                     </div>
@@ -66,9 +66,7 @@
     </div>
 
     <footer>
-        <div class="h6"><small>Icons made by <a href="https://www.flaticon.com/authors/geotatah" title="geotatah">geotatah</a>
-                from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"
-                    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></small></div>
+        
     </footer>
 
     <!-- Modal -->
@@ -76,25 +74,22 @@
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title text-success" id="kudoModalTitle">Give a Kudos</h5>
-                    <button type="button" class="close text-success" data-dismiss="modal" aria-label="Close">
+                    <h5 class="modal-title text-info" id="kudoModalTitle">Give a Kudos</h5>
+                    <button type="button" class="close text-info" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body text-success">
+                <div class="modal-body text-info">
                     <div class="container">
                         <div class="row">
-                            <div class="col-12">
-                                <div class="alert alert-danger"></div>
+                            <div class="col-12" id="error-message">
+                                <!--Dynamically displays the error message-->
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12 col-md-3">
                                 <select class="custom-select" id="fromSelect">
-                                    <option selected>From</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                    <!--Dynamically populate-->
                                 </select>
                             </div>
                             <div class="col-12 col-md-5">
@@ -107,10 +102,7 @@
                             </div>
                             <div class="col-12 col-md-3">
                                 <select class="custom-select" id="toSelect">
-                                    <option selected>To</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                   <!--Dynamically creates-->
                                 </select>
                             </div>
                         </div>
@@ -118,7 +110,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-success">Send Kudos</button>
+                    <button type="button" class="btn btn-info" id="kudoButton">Send Kudos</button>
                 </div>
             </div>
         </div>

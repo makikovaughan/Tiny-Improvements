@@ -14,11 +14,13 @@ var KudoSchema = new Schema({
     },
     from_user: {
         type: Schema.Types.ObjectId,
-        ref: "User"
+        ref: "User",
+        required: "Sender information is required"
     },
     to_user: {
         type: Schema.Types.ObjectId,
-        ref: "User"
+        ref: "User",
+        required: "Receiver information is required"
     }
   });
   
