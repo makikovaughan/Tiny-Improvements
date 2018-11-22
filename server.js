@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
-console.log(process.env.MONGODB_URI);
+console.log(process.env.PORT);
 
 //For Heroku
 if (process.env.MONGODB_URI) {
