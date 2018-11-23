@@ -10,8 +10,8 @@ $(function () {
                 $("#toSelect").empty();
 
                 //Default option tag for from/to on the Kudos modal window.
-                const fromOption = $("<option>").attr("id", "from").attr("selected", "selected").text("From");
-                const toOption = $("<option>").attr("id", "to").attr("selected", "selected").text("To");
+                const fromOption = $("<option>").attr("id", "from").attr("selected", "selected").text("From").val("");
+                const toOption = $("<option>").attr("id", "to").attr("selected", "selected").text("To").val("");
 
                 //Append the default <option> to <Select>
                 $("#fromSelect").append(fromOption);
@@ -116,6 +116,8 @@ $(function () {
         const body = $("#kudoMessage").val().trim();
         const noData = $(`<div class="alert alert-danger">No input data</div>`);
         const duplicateUser = $(`<div class="alert alert-danger">Sender and receiver cannot be the same.</div>`);
+
+        console.log(sender);
 
         if (!sender || !receiver || !title || !body) {
             $("#error-message").append(noData);
