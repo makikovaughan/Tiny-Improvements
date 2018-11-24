@@ -15,7 +15,7 @@ app.use(express.static("public"));
 
 //For Heroku
 if (config.use_env_variable) {
-  mongoose.connect(config.use_env_variable, { useNewUrlParser: true });
+  mongoose.connect(process.env[config.use_env_variable], { useNewUrlParser: true });
 }
 else {
   //Local URL
