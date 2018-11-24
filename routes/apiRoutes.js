@@ -64,6 +64,15 @@ module.exports = function (app) {
             to_user: req.body.to_user
         }
 
+        //If the inputs are empty, return 400 error.
+        if(!newKudos.to_user || !newKudos.from_user || !newKudos.title || !newKudos.body){
+            res.status(400).json({ msg: "Sender, receiver, title, or/and message is/are missing. Please check the input data." });
+        }
+        else if (newKudos.to_user === newKudos.from_user){
+            //Returns error 400 if the sender and receiver are the same.
+            res.status(400).json({ msg: "Sender and receiver cannot be the same. Please check the input data." });
+        }
+        else {
         Kudo.create(newKudos)
             .then(function (kudoData) {
                 return User.findOneAndUpdate({ _id: userId }, { $push: { kudos: kudoData._id } }, { new: true });
@@ -73,7 +82,8 @@ module.exports = function (app) {
             })
             .catch(function (error) {
                 res.json({ Error: error });
-            })
+            });
+        }
 
     });
 

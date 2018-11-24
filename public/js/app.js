@@ -114,7 +114,7 @@ $(function () {
         const receiver = $("#toSelect").val().trim();
         const title = $("#kudoTitle").val().trim();
         const body = $("#kudoMessage").val().trim();
-        const noData = $(`<div class="alert alert-danger">No input data</div>`);
+        const noData = $(`<div class="alert alert-danger">Sender, receiver, title, or/and message is/are missing. Please check the input data.</div>`);
         const duplicateUser = $(`<div class="alert alert-danger">Sender and receiver cannot be the same.</div>`);
 
         console.log(sender);
