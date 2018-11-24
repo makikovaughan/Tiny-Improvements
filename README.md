@@ -32,7 +32,7 @@ Public\
 
  1. Go to [Tiny Improvement Site](https://floating-oasis-34350.herokuapp.com/ ). Initially all kudos in the Database will be displayed.
 
-![home](./public/assets/images/Home.png)
+![home](./public/assets/images/home.png)
 
 2. Click on  Give Kudos button. This will pop up a window.
 
