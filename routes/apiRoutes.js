@@ -13,7 +13,7 @@ module.exports = function (app) {
             })
             .catch(function (error) {
                 res.json({ Error: error });
-            })
+            });
 
     });
 
